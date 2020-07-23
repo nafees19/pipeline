@@ -1,6 +1,9 @@
+= 
+POD and Deployment 
+=
 1) Create an NGINX Pod
 
-  kubectl run --generator=run-pod/v1 nginx --image=nginx
+    kubectl run --generator=run-pod/v1 nginx --image=nginx
 
 
 2) Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
@@ -24,16 +27,16 @@
 
     Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
 
-============
-IMPORTANT:
-============
+= 
+IMPORTANT 
+=
 kubectl create deployment does not have a --replicas option. You could first create it and then scale it using the kubectl scale command.
 
 
 
-============
+=
 Service
-============
+=
 
 1) Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
 
