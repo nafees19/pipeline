@@ -28,12 +28,14 @@ Save it to a file, make necessary changes to the file (for example, adding more 
 ##############
 IMPORTANT:
 ##############
+
 kubectl create deployment does not have a --replicas option. You could first create it and then scale it using the kubectl scale command.
 
 
 ##############
 Service
 ##############
+
 Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
 
 kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
